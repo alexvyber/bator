@@ -1,0 +1,4 @@
+{
+  "icon": "Binary",
+  "pages": ["organizations", "api-keys", "localization", "custom-auth-paths", "custom-settings", "additional-fields"]
+}
