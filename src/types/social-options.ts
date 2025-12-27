@@ -7,6 +7,7 @@ export type SocialOptions = {
    * @remarks `SocialProvider[]`
    */
   providers: SocialProvider[];
+
   /**
    * Custom social sign in function
    */

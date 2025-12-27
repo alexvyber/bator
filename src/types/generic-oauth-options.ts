@@ -7,6 +7,7 @@ export type GenericOAuthOptions = {
    * @default []
    */
   providers: Provider[];
+
   /**
    * Custom generic OAuth sign in function
    */

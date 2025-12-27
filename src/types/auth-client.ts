@@ -18,20 +18,14 @@ export const authClient = createAuthClient({
     apiKeyClient(),
     multiSessionClient(),
     passkeyClient(),
-    oneTapClient({
-      clientId: "",
-    }),
+    oneTapClient({ clientId: "" }),
     genericOAuthClient(),
     anonymousClient(),
     usernameClient(),
     magicLinkClient(),
     emailOTPClient(),
     twoFactorClient(),
-    organizationClient({
-      teams: {
-        enabled: true,
-      },
-    }),
+    organizationClient({ teams: { enabled: true } }),
   ],
 });
 

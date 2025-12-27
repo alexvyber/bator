@@ -4,11 +4,13 @@ export type TeamOptions = {
    * @default false
    */
   enabled?: boolean;
+
   /**
    * Custom roles to add to the built-in team roles (admin, member)
    * @default []
    */
   customRoles?: Array<{ role: string; label: string }>;
+
   /**
    * Team color configuration
    * Define custom CSS variables for team colors
@@ -20,6 +22,7 @@ export type TeamOptions = {
      * @default 5
      */
     count?: number;
+
     /**
      * CSS variable prefix
      * @default "team"
@@ -33,10 +36,12 @@ export type TeamOptionsContext = {
    * Enable teams feature
    */
   enabled: boolean;
+
   /**
    * Custom roles to add to the built-in team roles (admin, member)
    */
   customRoles: Array<{ role: string; label: string }>;
+
   /**
    * Team color configuration
    */

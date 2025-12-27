@@ -27,23 +27,15 @@ export type AuthHooks = {
   useListApiKeys: () => AuthHook<ApiKey[]>;
   useActiveOrganization: () => Partial<ReturnType<AuthClient["useActiveOrganization"]>>;
   useListOrganizations: () => Partial<ReturnType<AuthClient["useListOrganizations"]>>;
-  useHasPermission: (params: Parameters<AuthClient["organization"]["hasPermission"]>[0]) => AuthHook<{
-    error: null;
-    success: boolean;
-  }>;
-  useInvitation: (params: Parameters<AuthClient["organization"]["getInvitation"]>[0]) => AuthHook<
-    Invitation & {
-      organizationName: string;
-      organizationSlug: string;
-      organizationLogo?: string;
-    }
-  >;
+  useHasPermission: (params: Parameters<AuthClient["organization"]["hasPermission"]>[0]) => AuthHook<{ error: null; success: boolean }>;
+  useInvitation: (
+    params: Parameters<AuthClient["organization"]["getInvitation"]>[0],
+  ) => AuthHook<Invitation & { organizationName: string; organizationSlug: string; organizationLogo?: string }>;
   useListInvitations: (params: Parameters<AuthClient["organization"]["listInvitations"]>[0]) => AuthHook<Invitation[]>;
   useListUserInvitations: () => AuthHook<Invitation[]>;
-  useListMembers: (params: Parameters<AuthClient["organization"]["listMembers"]>[0]) => AuthHook<{
-    members: (Member & { user?: Partial<User> | null })[];
-    total: number;
-  }>;
+  useListMembers: (
+    params: Parameters<AuthClient["organization"]["listMembers"]>[0],
+  ) => AuthHook<{ members: (Member & { user?: Partial<User> | null })[]; total: number }>;
   useListTeams: (params?: { organizationId?: string }) => AuthHook<Team[]>;
   useListTeamMembers: (params: { teamId?: string }) => AuthHook<TeamMember[]>;
   useListUserTeams: () => AuthHook<Team[]>;
